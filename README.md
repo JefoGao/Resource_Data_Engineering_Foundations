@@ -236,4 +236,26 @@ result_df = athlete_df.groupby('Year').Age.mean().compute()
 |:--:|
 |![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/5e69b2d0-d6e2-4ffc-b818-3a9debe92f35)|
 ## 3.3 Spark
+### 3.3.1 Spark
+- Distributes data processing tasks between clusters (computers)
+- Processing is done in memory
+- Faster processing as it avoids disk writes
+- It relied on resilient distributed datasets (RDDs)
+### 3.3.2 RDD
+- Data structure that maintains data across multiple nodes
+- Immutable (read-only), partitioned collection of elements
+- Tracks data lineage information to recover lost data
+- Supports two types of operations: transformations and actions
+
+|Transformation|Actions|
+|:--:|:--:|
+|<ul><li>filter()</li><li>map()</li><li>groupByKey()</li><li>union()</li></ul>|<ul><li>count()</li><li>first()</li><li>collect()</li><li>reduce()</li></ul>|
+### 3.3.3 PySpark
+- Python API for Spark
+- DataFrame abstraction
+- Similar to pandas because of the DataFrame abstraction
+
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/39fbd163-0897-4391-952f-41b8400fb441)|
+|:--:|
+|PySpark Analogous of SQL|
 ## 3.4 Airflow

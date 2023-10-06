@@ -259,3 +259,45 @@ result_df = athlete_df.groupby('Year').Age.mean().compute()
 |:--:|
 |PySpark Analogous of SQL|
 ## 3.4 Airflow
+### 3.4.1 Directed Acyclic Graph (DAG)
+- A collection of all the tasks that need to be run, organized in a way that reflects their relationship and dependencies
+- Set of nodes
+- Directed edges
+- There are no cycles
+```mermaid
+flowchart LR
+    A-->B-->D
+    B-->C-->E
+```
+### 3.4.2 Workflow Scheduler Tools
+- Linux - cron
+- Spotify - Luigi
+- Apache - Airflow
+![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/8865a4f5-8242-4568-8767-4fc7aea05fb0)
+### 3.4.3 Airflow
+- Tool for describing, executing, and monitoring workflows or pipelines
+- Based on DAGs
+- Written in Python
+```mermaid
+flowchart LR
+    n11[Start Cluster]
+    n21[Input Athlete Data]
+    n22[Input Venue Data]
+    n31[Enrich Athlete Data]
+    n11-->n21-->n31
+    n11-->n22-->n31
+```
+**Coding DAGs**
+```py
+dag = DAG('my_dag', start_date=datetime(2020, 12, 1))
+
+##define tasks of the DAG
+start_cluster = StartClusterOperator(task_id="start_cluster", dag=dag)
+input_athlete_data = SparkJobOperator(task_id="input_athlete_data", dag=dag)
+input_venue_data = SparkJobOperator(task_id="input_venue_data", dag=dag)
+
+##set up dependency flow
+start_cluster.set_downstream(input_athlete_data)
+input_athlete_data.set_downstream(enrich_athlete_data)
+input_venue_data.set_downstream(enrich_athlete_data)
+```

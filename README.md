@@ -1,5 +1,6 @@
 # Resource_Data_Engineering_Foundations
 
+# 0. Introduction
 ## 0.1 Introduction to Data Engineering
 ### 0.1.1 Challenges in a Data-driven Organization
 - Scattered Data: data is distributed in different sources
@@ -12,7 +13,7 @@
 - Remove corrupted files and repair the data pipeline
 - Automate tasks and pipelines that store data in a suitable format
 
-|**Definition: Data Engineering**|
+|**Definition:** Data Engineering|
 |:--|
 |A type of software engineering that focuses on designing, developing, testing, and maintaining architectures, such as databases and large-scale processing systems.|
 
@@ -84,3 +85,40 @@ flowchart LR
   n13-->n21
   n21-->n31
 ```
+# 1. Databases and Dataframes
+## 1.1 Introduction to Databases and Their Types
+### 1.1.1 What Are Databases?
+|**Definition:** Databases|
+|:--|
+|A large collection of data organized in efficient structures and formats to support rapid search and retrieval|
+- Holds data
+- Organizes data
+- Search data through DBMS
+### 1.1.2 Storage: Databases vs. File System
+|Databases|File System|
+|:--:|:--:|
+|Efficiently organized|Less organized|
+|Offers functionalities like search, replication, indexing|Offers minimal functionalities|
+### 1.1.3 Database Types
+```mermaid
+flowchart TD
+  n11[Structured Data]
+  n12[Semi-structured Data]
+  n13[Unstructured Data]
+  n21[Relational database]
+  n22["{key:value}
+  JSON"]
+  n23[Videos, images, text files]
+  n11-->n21
+  n12-->n22
+  n13-->n23
+```
+### 1.1.4 SQL vs. NoSQL
+|SQL|NoSQL|
+|:--:|:--:|
+|Relational databases|Non-relational databases|
+|Database schema|Structured or unstructured|
+|Data stored in tables|Document database with key-value stores (JSON objects)|
+|Tools: MySQL, PostgreSQL|Tools: Redis, MongoDB|
+## 1.2 Understanding Database Schema
+## 1.3 Distributive Computing

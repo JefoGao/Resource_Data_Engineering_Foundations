@@ -203,3 +203,37 @@ athlete_df = dd.from_pandas(df, npartitions=4)
 ##computing the average age of all the athletes
 result_df = athlete_df.groupby('Year').Age.mean().compute()
 ```
+# 3. Data Engineering Tools
+## 3.1 MapReduce and Hadoop
+|Hadoop|MapReduce|
+|:--|:--|
+|**Hadoop** is a collection of open-source projects, maintained by the Apache Software Foundation.|**MapReduce** is a processing technique and a program model for distributed computing based on Java.|
+**Hadoop**
+- Framework for distributed processing of large data sets across clusters of computers
+- Collection of open-source projects
+- Uses the MapReduce algorithm
+- Plays a central role in ETL processing
+
+**Hadoop DFS**
+- A distributed file system
+- Files reside on different computers
+- Essential part of the big data ecosystem
+- Replaced by cloud-managed storage services like GCS and S3
+
+**Hadoop MapReduce**
+- One of the first popularized big data processing paradigms.
+- The program splits tasks into sub-tasks, distributing the workload and data between several processing units.
+## 3.2 Hive
+- Data warehouse software project
+- Built on top of Hadoop
+- Hive SQL (Structured Query Language)
+
+**Hive SQL**
+- Hive gives an SQL-like interface to query data
+- Data extraction from databases and file systems that integrate with Hadoop
+- Earlier, queries had to be implemented in MapReduce Java API
+|How Hive Works|
+|:--:|
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/5e69b2d0-d6e2-4ffc-b818-3a9debe92f35)|
+## 3.3 Spark
+## 3.4 Airflow

@@ -36,25 +36,25 @@
 ### 0.3.1 Essential Tools
 ```mermaid
 flowchart TD
-  n11["Segmentation of Tools"]
-  n21["Storage:
-  Database"]
-  n22["Processing
-  Frameworks"]
-  n23["Automation:
-  Scheduling"]
-  n31["MySQL
-  PostgreSQL
-  MongoDB"]
-  n32["Spark
-  Hive
-  Flink and Kafka"]
-  n33["Airflow
-  Oozie
-  Luigi"]
-  n11-->n21-->n31
-  n11-->n22-->n32
-  n11-->n23-->n33
+    n11["Segmentation of Tools"]
+    n21["Storage:
+Database"]
+    n22["Processing
+Frameworks"]
+    n23["Automation:
+Scheduling"]
+    n31["MySQL
+PostgreSQL
+MongoDB"]
+    n32["Spark
+Hive
+Flink and Kafka"]
+    n33["Airflow
+Oozie
+Luigi"]
+    n11-->n21-->n31
+    n11-->n22-->n32
+    n11-->n23-->n33
 ```
 **Databases**
 - Used to hold large amounts of data
@@ -75,15 +75,15 @@ flowchart TD
 ### 0.3.2 A Complete Pipeline
 ```mermaid
 flowchart LR
-  n11[User Transactions]
-  n12[Historical Data]
-  n13[Online Analytics]
-  n21[Apache Spark]
-  n31[Processed Usable Analytics]
-  n11-->n21
-  n12-->n21
-  n13-->n21
-  n21-->n31
+    n11[User Transactions]
+    n12[Historical Data]
+    n13[Online Analytics]
+    n21[Apache Spark]
+    n31[Processed Usable Analytics]
+    n11-->n21
+    n12-->n21
+    n13-->n21
+    n21-->n31
 ```
 # 1. Databases and Dataframes
 ## 1.1 Introduction to Databases and Their Types
@@ -102,16 +102,16 @@ flowchart LR
 ### 1.1.3 Database Types
 ```mermaid
 flowchart TD
-  n11[Structured Data]
-  n12[Semi-structured Data]
-  n13[Unstructured Data]
-  n21[Relational database]
-  n22["{key:value}
-  JSON"]
-  n23[Videos, images, text files]
-  n11-->n21
-  n12-->n22
-  n13-->n23
+    n11[Structured Data]
+    n12[Semi-structured Data]
+    n13[Unstructured Data]
+    n21[Relational database]
+    n22["{key:value}
+JSON"]
+    n23[Videos, images, text files]
+    n11-->n21
+    n12-->n22
+    n13-->n23
 ```
 ### 1.1.4 SQL vs. NoSQL
 |SQL|NoSQL|
@@ -121,4 +121,18 @@ flowchart TD
 |Data stored in tables|Document database with key-value stores (JSON objects)|
 |Tools: MySQL, PostgreSQL|Tools: Redis, MongoDB|
 ## 1.2 Understanding Database Schema
+|**Definition:** Database Schema|
+|:--|
+|A schema describes the structure and relations of a database.|
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/0aa6cdc4-faf6-4167-ba7a-a820380ca804)|
+
+**Creating Schema**
+```sql
+-- create customer table for the food delivery app
+CREATE TABLE 'Customer' (
+    'id' SERIAL NOT NULL,
+    'first_name' varchar(50) NOT NULL,
+    'last_name' varchar(50) DEFAULT NULL,
+);
+```
 ## 1.3 Distributive Computing

@@ -153,3 +153,53 @@ CREATE TABLE 'Order' (
 |![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/bca6ee06-5ded-400f-8956-89f583fa0ec4)|
 |<ul><li>Facts: events that happened (for example, food orders)</li><li>Dimensions: information in the world (for example, customer details)</li></ul>|
 ## 1.3 Distributive Computing
+### 1.3.1 Major Tasks
+- Collect data from different sources
+- Join them together
+- Clean them
+- Aggregate them
+### 1.3.2 How It Works
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/d1ed413f-6b75-4df9-a8c3-3ae5ed7ebab4)|
+|:--|
+|Basis of modern data processing tools<ul><li>Memory</li><li>Processing power</li></ul>|
+|Methodology<ul><li>Split task into subtasks</li><li>Distribute subtasks on several computers</li></ul>|
+### 1.3.3 Benefits and Risks
+**Benefits**
+- More processing power
+- More scalable
+- Cost effective
+
+**Risks**
+- Overhead due to communication between nodes
+- Task needs to be large
+- Need several processing units
+
+|**Example:** Olympic Events Data|
+|:--|
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/6b229e48-c1b8-4c7a-8611-0360ddbfe202)|
+|Get the average age|
+
+**Multiprocessing**
+```py
+# low-level code
+from multiprocessing import Pool
+
+def athlete_avg_age(grouped_data):
+    year, group = grouped_data
+    return pd.DataFrame({"Age": group["Age"].mean()}, index = [year])
+
+with Pool(4) as p:
+    average_age = p.map(athlete_avg_age, df.groupby("Year"))
+```
+
+**Using Dask**
+```py
+# high-level code
+import dask.dataframe as dd
+
+##partitioning the data
+athlete_df = dd.from_pandas(df, npartitions=4)
+
+##computing the average age of all the athletes
+result_df = athlete_df.groupby('Year').Age.mean().compute()
+```

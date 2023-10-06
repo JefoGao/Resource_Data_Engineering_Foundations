@@ -133,6 +133,23 @@ CREATE TABLE 'Customer' (
     'id' SERIAL NOT NULL,
     'first_name' varchar(50) NOT NULL,
     'last_name' varchar(50) DEFAULT NULL,
+    'email' varchar(50) NOT NULL,
+    'password' varchar(50) NOT NULL,
+    PRIMARY KEY ('id')
+);
+
+-- create order table
+CREATE TABLE 'Order' (
+    'id' SERIAL NOT NULL,
+    'customer_id' integer REFERENCES 'Customer',
+    'dish_name' varchar(50) DEFAULT NULL,
+    'dish_price' integer NOT NULL,
+    PRIMARY KEY ('id')
 );
 ```
+|**Definition:** Star Schema|
+|:--|
+|Consists of one or more fact tables referencing any number of dimension tables|
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/bca6ee06-5ded-400f-8956-89f583fa0ec4)|
+|<ul><li>Facts: events that happened (for example, food orders)</li><li>Dimensions: information in the world (for example, customer details)</li></ul>|
 ## 1.3 Distributive Computing

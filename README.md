@@ -232,6 +232,7 @@ result_df = athlete_df.groupby('Year').Age.mean().compute()
 - Hive gives an SQL-like interface to query data
 - Data extraction from databases and file systems that integrate with Hadoop
 - Earlier, queries had to be implemented in MapReduce Java API
+
 |How Hive Works|
 |:--:|
 |![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/5e69b2d0-d6e2-4ffc-b818-3a9debe92f35)|

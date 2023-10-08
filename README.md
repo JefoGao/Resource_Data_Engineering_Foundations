@@ -4,14 +4,14 @@
 |--|
 |[0. Introduction](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/tree/main#0-introduction)<br>+-- [0.1 Introduction To Data Engineering](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/tree/main#01-introduction-to-data-engineering)<br>+-- [0.2 Data Engineer Vs. Data Scientist](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/tree/main#02-data-engineer-vs-data-scientist)<br>+-- [0.3 Essential Tools For Data Engineering](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/tree/main#03-essential-tools-for-data-engineering)<br>[1. Databases And Dataframes](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/tree/main#1-databases-and-dataframes)<br>+-- [1.1 Introduction To Databases And Their Types](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/tree/main#11-introduction-to-databases-and-their-types)<br>+-- [1.2 Understanding Database Schema](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/tree/main#12-understanding-database-schema)<br>+-- [1.3 Distributive Computing](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/tree/main#13-distributive-computing)|
 
-# 0. Introduction
-## 0.1 Introduction to Data Engineering
-### 0.1.1 Challenges in a Data-driven Organization
+# 1. Introduction
+## 1.1 Introduction to Data Engineering
+### 1.1.1 Challenges in a Data-driven Organization
 - Scattered Data: data is distributed in different sources
 - Database Inefficiency: slow and blunt analyses due to inefficient data storage
 - Data Corruption: legacy code corrupting files
 - Repetitive Work: manual and repetitive tasks that slow you down
-### 0.1.2 The Role of a Data Engineer
+### 1.1.2 The Role of a Data Engineer
 - Gather data from different sources
 - Optimize databases for analyses
 - Remove corrupted files and repair the data pipeline
@@ -21,13 +21,13 @@
 |:--|
 |A type of software engineering that focuses on designing, developing, testing, and maintaining architectures, such as databases and large-scale processing systems.|
 
-### 0.1.3 What Skills Do Data Engineers Need?
+### 1.1.3 What Skills Do Data Engineers Need?
 - Linux and command line
 - Prior programming experience in Python, Java, or Scala
 - SQL
 - Distributed systems, data ingestion, processing frameworks, storage engines, and tools associated with each
 
-## 0.2 Data Engineer vs. Data Scientist
+## 1.2 Data Engineer vs. Data Scientist
 |Data Engineer|Data Scientist|
 |:--:|:--:|
 |Develop robust and scalable data architecture|Mine data for patterns|
@@ -36,8 +36,8 @@
 |Comprehend cloud technology|Comprehend predictive modeling using ML|
 |Maintain processes for coherent data management|Monitor business processes and metrics|
 
-## 0.3 Essential Tools for Data Engineering
-### 0.3.1 Essential Tools
+## 1.3 Essential Tools for Data Engineering
+### 1.3.1 Essential Tools
 ```mermaid
 flowchart TD
     n11["Segmentation of Tools"]
@@ -76,7 +76,7 @@ Luigi"]
 - Plan jobs with specific intervals
 - Resolve dependency requirements of jobs
 
-### 0.3.2 A Complete Pipeline
+### 1.3.2 A Complete Pipeline
 ```mermaid
 flowchart LR
     n11[User Transactions]
@@ -89,21 +89,21 @@ flowchart LR
     n13-->n21
     n21-->n31
 ```
-# 1. Databases and Dataframes
-## 1.1 Introduction to Databases and Their Types
-### 1.1.1 What Are Databases?
+# 2. Databases and Dataframes
+## 2.1 Introduction to Databases and Their Types
+### 2.1.1 What Are Databases?
 |**Definition:** Databases|
 |:--|
 |A large collection of data organized in efficient structures and formats to support rapid search and retrieval|
 - Holds data
 - Organizes data
 - Search data through DBMS
-### 1.1.2 Storage: Databases vs. File System
+### 2.1.2 Storage: Databases vs. File System
 |Databases|File System|
 |:--:|:--:|
 |Efficiently organized|Less organized|
 |Offers functionalities like search, replication, indexing|Offers minimal functionalities|
-### 1.1.3 Database Types
+### 2.1.3 Database Types
 ```mermaid
 flowchart TD
     n11[Structured Data]
@@ -117,14 +117,14 @@ JSON"]
     n12-->n22
     n13-->n23
 ```
-### 1.1.4 SQL vs. NoSQL
+### 2.1.4 SQL vs. NoSQL
 |SQL|NoSQL|
 |:--:|:--:|
 |Relational databases|Non-relational databases|
 |Database schema|Structured or unstructured|
 |Data stored in tables|Document database with key-value stores (JSON objects)|
 |Tools: MySQL, PostgreSQL|Tools: Redis, MongoDB|
-## 1.2 Understanding Database Schema
+## 2.2 Understanding Database Schema
 |**Definition:** Database Schema|
 |:--|
 |A schema describes the structure and relations of a database.|
@@ -156,18 +156,18 @@ CREATE TABLE 'Order' (
 |Consists of one or more fact tables referencing any number of dimension tables|
 |![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/bca6ee06-5ded-400f-8956-89f583fa0ec4)|
 |<ul><li>Facts: events that happened (for example, food orders)</li><li>Dimensions: information in the world (for example, customer details)</li></ul>|
-## 1.3 Distributive Computing
-### 1.3.1 Major Tasks
+## 2.3 Distributive Computing
+### 2.3.1 Major Tasks
 - Collect data from different sources
 - Join them together
 - Clean them
 - Aggregate them
-### 1.3.2 How It Works
+### 2.3.2 How It Works
 |![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/d1ed413f-6b75-4df9-a8c3-3ae5ed7ebab4)|
 |:--|
 |Basis of modern data processing tools<ul><li>Memory</li><li>Processing power</li></ul>|
 |Methodology<ul><li>Split task into subtasks</li><li>Distribute subtasks on several computers</li></ul>|
-### 1.3.3 Benefits and Risks
+### 2.3.3 Benefits and Risks
 **Benefits**
 - More processing power
 - More scalable

@@ -307,7 +307,7 @@ input_venue_data.set_downstream(enrich_athlete_data)
 |![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/6997104a-a259-427b-adb7-51518c5306ba)|
 |:--|
 |Extracting data from various sources|
-### 4.1.1 Extraction from Files
+### 4.1.1 Data from Files
 **Unstructured**
 - Plain text
 - For example, extracting numbers from documents
@@ -343,8 +343,15 @@ input_venue_data.set_downstream(enrich_athlete_data)
 - Send data in JSON format
 - For example, Twitter API, TMDb API, Google APIs
 ```py
-response
+response = requests.get('https://api.themoviedb.org/3/discover/movie?api_key=' +
+                    api_key + '&primary_release_year=2017&sort_by=revenue.desc')
+
+response.json()
 ```
+### 4.1.4 Data from Databases
+|Online Transaction Processing (OLTP)|Online Analytical Processing(OLAP)|
+|--|--|
+|||
 ## 4.2 Data Extraction from a PostgreSQL Database
 ## 4.3 Challenge and Solution: Data Extraction
 ## 4.4 Transforming Data

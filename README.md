@@ -354,7 +354,15 @@ response.json()
 |<ul><li>Application databases</li><li>Many transactions</li><li>Row oriented</li><li>Stored per record</li></ul>|<ul><li>Analytical database</li><li>Aggregate queries</li><li>Column oriented</li><li>Parallelization</li></ul>|
 
 ## 4.2 Data Extraction from a PostgreSQL Database
-## 4.3 Challenge and Solution: Data Extraction
-## 4.4 Transforming Data
+|Movie Ratings Example|
+|--|
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/0b8d1e1a-f015-4467-8975-49ed8448f69a)|
+|database|
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/33a3c95b-8423-42d1-b4e3-d87f40760b48)|
+|check the data|
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/4217d98f-4261-4c0c-bfb1-6b095d0257bf)|
+|check the data using PySpark|
+
+## 4.3 Transforming Data
 ## 4.5 Loading Data into a DB
 ## 4.6 Scheduling ETL Pipeline Using Airflow

@@ -364,5 +364,8 @@ response.json()
 |check the data using PySpark|
 
 ## 4.3 Transforming Data
-## 4.5 Loading Data into a DB
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/d8ca5786-0c49-4125-96b3-0ce620fb57ef)|
+|--|
+|read user table, transforming data, and join movies and avg_ratings|
+## 4.4 Loading Data into a DB
 ## 4.6 Scheduling ETL Pipeline Using Airflow

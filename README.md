@@ -351,7 +351,8 @@ response.json()
 ### 4.1.4 Data from Databases
 |Online Transaction Processing (OLTP)|Online Analytical Processing(OLAP)|
 |--|--|
-|||
+|<ul><li>Application databases</li><li>Many transactions</li><li>Row oriented</li><li>Stored per record</li></ul>|<ul><li>Analytical database</li><li>Aggregate queries</li><li>Column oriented</li><li>Parallelization</li></ul>|
+
 ## 4.2 Data Extraction from a PostgreSQL Database
 ## 4.3 Challenge and Solution: Data Extraction
 ## 4.4 Transforming Data

@@ -368,4 +368,15 @@ response.json()
 |--|
 |read user table, transforming data, and join movies and avg_ratings|
 ## 4.4 Loading Data into a DB
-## 4.6 Scheduling ETL Pipeline Using Airflow
+- Transform the above steps into functions to make them reusable
+- Load transformed dataframe to the database
+
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/019533ad-3bb1-46a1-a379-6814eefc3a1e)|
+|--|
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/70bbd0fb-d335-473f-8b41-9e322d975307)|
+|create workflow|
+## 4.5 Scheduling ETL Pipeline Using Airflow
+|dags.py|
+|--|
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/2f050ca3-324a-4e05-9c2f-608591aaacaa)|
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/36ab3fa9-fdf1-487e-b3c3-6b8e2a292d43)|

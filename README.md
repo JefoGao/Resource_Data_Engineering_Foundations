@@ -302,3 +302,51 @@ start_cluster.set_downstream(input_athlete_data)
 input_athlete_data.set_downstream(enrich_athlete_data)
 input_venue_data.set_downstream(enrich_athlete_data)
 ```
+# 4. ETL Pipeline
+## 4.1 Sources of Data Extraction
+|![image](https://github.com/JefoGao/Resource_Data_Engineering_Foundations/assets/19381768/6997104a-a259-427b-adb7-51518c5306ba)|
+|:--|
+|Extracting data from various sources|
+### 4.1.1 Extraction from Files
+**Unstructured**
+- Plain text
+- For example, extracting numbers from documents
+
+**Flat files**
+- Row is record
+- Column is attribute or feature
+- For example, .csv or .tsv files
+
+### 4.1.2 JSON
+- JavaScript Object Notation
+- Semi-structured
+- Atomic: number, string, bool, null
+- Composite: array, object
+```
+{
+    "food": {
+        "vegetables": [
+            "carrot",
+            "potato",
+            "reddish"
+        ],
+        "fruits":[
+            "apple",
+            "banana",
+            {"berries": ["strawberry", "blackberries"]}
+        ]
+    }
+}
+```
+### 4.1.3 Data through APIs
+- Application programming interface
+- Send data in JSON format
+- For example, Twitter API, TMDb API, Google APIs
+```py
+response
+```
+## 4.2 Data Extraction from a PostgreSQL Database
+## 4.3 Challenge and Solution: Data Extraction
+## 4.4 Transforming Data
+## 4.5 Loading Data into a DB
+## 4.6 Scheduling ETL Pipeline Using Airflow
